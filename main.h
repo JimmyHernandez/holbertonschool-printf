@@ -15,15 +15,14 @@ _putchar(char c);
 /* structure */
 
 /**
-* pick - A struct function.
-*
-* @input: 
-*
-* @f:    
+* struct - a type to print.
+* @data: data type. 
+* @f: function type.
 */
-typedef struct type
+
+typedef struct pick
 {
-        char input;
+        char data;
         int (*f)(va_list ptr);
 
 } pick_t;
