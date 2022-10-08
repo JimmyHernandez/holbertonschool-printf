@@ -32,6 +32,7 @@ typedef struct pick
 int _printf(const char *format, ...);
 int print_string(va_list ptr);
 int print_char(va_list ptr);
-
+int print_numbers(va_list arp);
+int print_int(int i);
 
 #endif
