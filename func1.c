@@ -1,7 +1,5 @@
 #include "main.h"
-
 /*func1 file contains functions: print_char and print_string*/
-
 /**
  * print_char - function that prints single character
  * @ptr: input data from user
@@ -33,7 +31,7 @@ int print_string(va_list ptr)
 
     str = va_arg(ptr, char *);
 
-    if (str == '\0')
+    if (*str == '\0')
         {
             _putchar('\0');
         }
@@ -43,5 +41,5 @@ int print_string(va_list ptr)
             _putchar(str[i]);
         }
 
-    return (str);
+    return (i);
 }
