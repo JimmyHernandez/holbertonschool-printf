@@ -40,7 +40,7 @@ int _printf(const char *format, ...)
 		/* to set a format specifer*/
 		if (format[idx] == '%')
 		{
-			/* to print just % /*/
+			/* to print just % */
 			if(format[idx + 1] == '%')
 			{
 				_putchar('%');
@@ -60,4 +60,4 @@ int _printf(const char *format, ...)
 	}
 va_end(ptr);
 return (count);
-
+}
