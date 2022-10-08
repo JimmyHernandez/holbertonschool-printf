@@ -15,10 +15,9 @@ int _printf(const char *format, ...)
 	static pick_t option[] = {
 		{'c', print_char},
 		{'s', print_string},
-		{'d', print_numbers},
-		{'i', print_numbers},
 		{'\0', NULL}
 	};
+
 	va_start(ptr, format);
 	/*  filter to avoid null character in the program*/
 	if (ptr == NULL || format == NULL)
