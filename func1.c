@@ -5,12 +5,13 @@
 /**
  * print_char - function that prints single character
  * @ptr: input data from user
- * return: character to be print
+ * Return: character to be print
  */
 int print_char(va_list ptr)
 {
 	char c;
-	c = va_arg(ptr,int);
+
+	c = va_arg(ptr, int);
 
 	if (c == '\0')
 	{
@@ -24,7 +25,7 @@ int print_char(va_list ptr)
 /**
  * print_string - prints a sequence of character.
  * @ptr: input data from users.
- * return: the sequence of character to be print.
+ * Return: the sequence of character to be print.
  */
 int print_string(va_list ptr)
 {
@@ -33,17 +34,17 @@ int print_string(va_list ptr)
 
 	str = va_arg(ptr, char *);
 
-	if (str == '\0')
+	if (*str == '\0')
 	{
 		_putchar('\0');
 	}
 
-	for (i = 0 ; str[i] != '\0';i++)
+	for (i = 0 ; str[i] != '\0'; i++)
 	{
 		_putchar(str[i]);
 	}
 
-	return (str);
+	return (*str);
 }
 
 /**
@@ -60,7 +61,7 @@ int print_numbers(va_list arp)
 	num = va_arg(arp, int);
 	count += print_int(num);
 
-	return(count);
+	return (count);
 }
 
 /**
@@ -72,7 +73,8 @@ int print_numbers(va_list arp)
 
 int print_int(int i)
 {
-	int count = 1, unsigned int num = 0;
+	int count = 1;
+	unsigned int num = 0;
 
 	if (i < 0)
 	{
@@ -82,13 +84,13 @@ int print_int(int i)
 	}
 	else
 	{
-		num i;
+		num = i;
 	}
-	if (num/10)
+	if (num / 10)
 	{
-		count += print_int(num/10);
+		count += print_int(num / 10);
 	}
-	_putchar((num % 10) + 48;
+	_putchar((num % 10) + 48);
 
-			return(count);
-			}
+	return (count);
+}
