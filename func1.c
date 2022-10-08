@@ -33,7 +33,7 @@ int print_string(va_list ptr)
 
     str = va_arg(ptr, char *);
 
-    if (str == '\0')
+    if (*str == '\0')
         {
             _putchar('\0');
         }
@@ -43,5 +43,5 @@ int print_string(va_list ptr)
             _putchar(str[i]);
         }
 
-    return (str);
+    return (*str);
 }

@@ -10,7 +10,7 @@
 
 /* prototype to write output to stdout, the standard output stream*/
 
-_putchar(char c);
+int _putchar(char c);
 
 /* structure */
 
