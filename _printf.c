@@ -1,16 +1,18 @@
 #include "main.h"
 /**
+
  * _printf -A Function that prints in
  *  stdout depending on the format.
+
  *@format:the parameters passed into the function.
  *Return: character to be printed.
  */
 int _printf(const char *format, ...)
-{
-	va_list ptr;
+
+{	va_list ptr;
+
 	int idx, idx2;
 	int count = 0;
-
 	/*structure of type pick*/
 	static pick_t option[] = {
 		{'c', print_char},
@@ -33,6 +35,7 @@ int _printf(const char *format, ...)
 		}
 		/* to set a format specifer*/
 		if (format[idx] == '%')
+
 		{
 			/* to print just % */
 			if (format[idx + 1] == '%')
@@ -42,6 +45,14 @@ int _printf(const char *format, ...)
 				count++;
 			}
 			/* print character with format specifer*/
+
+		{ /* to print just % */
+			if (format[idx + 1] == '%')
+			{	_putchar('%');
+				idx++;
+				count++;
+			} /* print character with format specifer*/
+
 			for (idx2 = 0; idx2 < 4; idx2++)
 			{
 				if (format[idx + 1] == option[idx2].data)
