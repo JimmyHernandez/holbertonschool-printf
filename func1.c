@@ -14,6 +14,7 @@ int print_char(va_list ptr)
 	{
 		return ('\0');
 	}
+
 	_putchar(c);
 	return (c);
 }
@@ -22,12 +23,13 @@ int print_char(va_list ptr)
 *@ptr: input data from users.
 *Return: the sequence of character to be print.
 */
+
 int print_string(va_list ptr)
 {
 	char *str;
 	int i;
 
-	str = va_arg(ptr, char *);
+  str = va_arg(ptr, char *);
 
 	if (*str == '\0')
 	{
@@ -36,8 +38,56 @@ int print_string(va_list ptr)
 
 	for (i = 0 ; str[i] != '\0'; i++)
 	{
-	_putchar(str[i]);
+		_putchar(str[i]);
 	}
 
 	return (*str);
+}
+
+/**
+ * print_numbers - Prints the integer
+ * @arp: Argument Pointer
+ *
+ * Return: Count of all numbers printed
+ */
+
+int print_numbers(va_list arp)
+{
+	int num = 0, count = 0;
+
+	num = va_arg(arp, int);
+	count += print_int(num);
+
+	return (count);
+}
+
+/**
+ * print_int - Prints the integer
+ * @i: Number to be printed
+ *
+ * Return: Count of all numbers printed
+ */
+
+int print_int(int i)
+{
+	int count = 1;
+	unsigned int num = 0;
+
+	if (i < 0)
+	{
+		_putchar('-');
+		count++;
+		num = i * -1;
+	}
+	else
+	{
+		num = i;
+	}
+	if (num / 10)
+	{
+		count += print_int(num / 10);
+	}
+	_putchar((num % 10) + 48);
+
+	return (count);
 }
