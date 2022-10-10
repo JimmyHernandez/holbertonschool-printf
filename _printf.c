@@ -35,11 +35,7 @@ int _printf(const char *format, ...)
 		if (format[idx] == '%')
 		{
 			/* to print just % */
-<<<<<<< HEAD
 			if(format[idx + 1] == '%')
-=======
-			if (format[idx + 1] == '%')
->>>>>>> 087b31b7f4f1384b17993d2fcfc340766e1ec36f
 			{
 				_putchar('%');
 				idx++;
@@ -67,8 +63,4 @@ int _printf(const char *format, ...)
 	}
 va_end(ptr);
 return (count);
-<<<<<<< HEAD
 }
-=======
-}	
->>>>>>> 087b31b7f4f1384b17993d2fcfc340766e1ec36f
