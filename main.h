@@ -10,21 +10,20 @@
 
 /* prototype to write output to stdout, the standard output stream*/
 
-_putchar(char c);
+int _putchar(char c);
 
 /* structure */
 
 /**
-* struct - a type to print.
-* @data: data type. 
-* @f: function type.
+*struct - a type to print.
+*@data: data type.
+*@f: function type.
 */
 
 typedef struct pick
 {
-        char data;
-        int (*f)(va_list ptr);
-
+	char data;
+	int (*f)(va_list ptr);
 } pick_t;
 
 /* prototypes*/
@@ -32,6 +31,7 @@ typedef struct pick
 int _printf(const char *format, ...);
 int print_string(va_list ptr);
 int print_char(va_list ptr);
-
+int print_numbers(va_list arp);
+int print_int(int i);
 
 #endif
