@@ -43,7 +43,6 @@ int print_string(va_list ptr)
 
 	return (*str);
 }
-
 /**
  * print_numbers - Prints the integer
  * @arp: Argument Pointer
@@ -60,14 +59,12 @@ int print_numbers(va_list arp)
 
 	return (count);
 }
-
 /**
  * print_int - Prints the integer
  * @i: Number to be printed
  *
  * Return: Count of all numbers printed
  */
-
 int print_int(int i)
 {
 	int count = 1;
