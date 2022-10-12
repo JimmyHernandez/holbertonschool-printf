@@ -16,20 +16,20 @@ int print_char(va_list ptr)
 	}
 
 	_putchar(c);
-	return (c);
+	return (1);
 }
 /**
-*print_string - prints a sequence of character.
-*@ptr: input data from users.
-*Return: the sequence of character to be print.
-*/
+ *print_string - prints a sequence of character.
+ *@ptr: input data from users.
+ *Return: the sequence of character to be print.
+ */
 
 int print_string(va_list ptr)
 {
 	char *str;
 	int i;
 
-  str = va_arg(ptr, char *);
+	str = va_arg(ptr, char *);
 
 	if (*str == '\0')
 	{
@@ -41,7 +41,7 @@ int print_string(va_list ptr)
 		_putchar(str[i]);
 	}
 
-	return (*str);
+	return (i);
 }
 
 /**
