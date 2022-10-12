@@ -31,7 +31,7 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			if (format[idx + 1] = NULL)
+			if (format[idx + 1] == NULL)
 				return (-1);
 			if (format[idx + 1] == '%')
 			{
@@ -49,7 +49,6 @@ int _printf(const char *format, ...)
 			}
 		}
 	}
-}
-va_end(ptr);
-return (count);
+	va_end(ptr);
+	return (count);
 }
