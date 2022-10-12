@@ -20,38 +20,36 @@ int _printf(const char *format, ...)
 	va_start(ptr, format);
 
 	if (ptr == NULL || format == NULL)
-	{return (-1); }
+		return (-1);
 
 	for (idx = 0; format[idx] != '\0'; idx++)
 	{
 		if (format[idx] != '%')
-		{	_putchar(format[idx]);
+		{
+			_putchar(format[idx]);
 			count++;
 		}
-		if (format[idx] == '%')
+		else
 		{
+			if format[i + 1] = NULL
+				return (-1);
 			if (format[idx + 1] == '%')
-			{	_putchar('%');
+			{
+				_putchar('%');
 				idx++;
 				count++;
 			}
-
+			for (idx2 = 0; idx2 < 4; idx2++)
 			{
-				if (format[idx + 1] == '%')
-				{	_putchar('%');
-					idx++;
-					count++;
-				}
-
-				for (idx2 = 0; idx2 < 4; idx2++)
+				if (format[idx + 1] == option[idx2].data)
 				{
-					if (format[idx + 1] == option[idx2].data)
-					{	count += option[idx2].f(ptr);
-						idx++;
-					}
+					count += option[idx2].f(ptr);
+					idx++;
 				}
 			}
 		}
-	} va_end(ptr);
-	return (count);
+	}
+}
+va_end(ptr);
+return (count);
 }
