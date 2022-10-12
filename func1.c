@@ -57,10 +57,10 @@ int print_percentage(__attribute__((unused))va_list ptr)
 
 /**
  * print_numbers - Prints the integer
- * @ptr: Argument Pointer
+ * @arp: Argument Pointer
  * Return: Count of all numbers printed
  */
-int print_numbers(va_list ptr)
+int print_numbers(va_list arp)
 {
 	int num = 0, count = 0;
 
