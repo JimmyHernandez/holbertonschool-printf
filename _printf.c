@@ -26,16 +26,20 @@ int _printf(const char *format, ...)
 	for (idx = 0; format[idx] != '\0'; idx++)
 	{
 		if (format[idx] != '%')
-		{	
-      _putchar(format[idx]);
+		{	_putchar(format[idx]);
 			count++;
 		}
-    
 		if (format[idx] == '%')
 		{
 			if (format[idx + 1] == '%')
-			{	
-        _putchar('%');
+			{	_putchar('%');
+				idx++;
+				count++;
+			}
+
+			{
+			if (format[idx + 1] == '%')
+			{	_putchar('%');
 				idx++;
 				count++;
 			}
