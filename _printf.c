@@ -31,7 +31,7 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			if (format[idx + 1] == NULL)
+			if (!(format[idx + 1]))
 				return (-1);
 			if (format[idx + 1] == '%')
 			{
