@@ -5,9 +5,11 @@
  *@format: The parameters passed into the function.
  *Return: Character to be printed.
  */
+
 int _printf(const char *format, ...)
-{
-	va_list ptr;
+
+{	va_list ptr;
+
 	int idx, idx2;
 	int count = 0;
 

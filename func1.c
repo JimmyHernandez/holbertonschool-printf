@@ -1,11 +1,8 @@
 #include "main.h"
-
-/*func1 file contains functions: print_char and print_string*/
-
 /**
- * print_char - function that prints single character
- * @ptr: input data from user
- * Return: character to be print
+ *print_char - function that prints single character
+ *@ptr: input data from user
+ *Return: character to be print
  */
 int print_char(va_list ptr)
 {
@@ -19,20 +16,20 @@ int print_char(va_list ptr)
 	}
 
 	_putchar(c);
-
 	return (c);
 }
 /**
- * print_string - prints a sequence of character.
- * @ptr: input data from users.
- * Return: the sequence of character to be print.
- */
+*print_string - prints a sequence of character.
+*@ptr: input data from users.
+*Return: the sequence of character to be print.
+*/
+
 int print_string(va_list ptr)
 {
 	char *str;
 	int i;
 
-	str = va_arg(ptr, char *);
+  str = va_arg(ptr, char *);
 
 	if (*str == '\0')
 	{
