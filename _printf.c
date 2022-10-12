@@ -14,6 +14,7 @@ int _printf(const char *format, ...)
 	static pick_t option[] = {
 		{'c', print_char},
 		{'s', print_string},
+		{'%', print_percentage},
 		{'d', print_numbers},
 		{'i', print_numbers},
 		{'\0', NULL}

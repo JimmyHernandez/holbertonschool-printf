@@ -31,6 +31,8 @@ int _printf(const char *format, ...);
 /*prototypes*/
 int print_string(va_list ptr); /*to print string*/
 int print_char(va_list ptr); /* to print a single character*/
+int print_percentage(__attribute__((unused))va_list ptr);
 int print_numbers(va_list arp);
 int print_int(int i);
+
 #endif

@@ -18,7 +18,6 @@ int print_char(va_list ptr)
 	_putchar(c);
 	return (c);
 }
-
 /**
 *print_string - prints a sequence of character.
 *@ptr: input data from users.
@@ -40,10 +39,26 @@ int print_string(va_list ptr)
 	{
 		_putchar(str[i]);
 	}
-
+	
     return (i);
 }
+/**
+ * print_percentage - print a percetange
+ * @ptr: list of arguments
+ *Return: the number of char printed (1)
+ */
+int print_percentage(__attribute__((unused))va_list ptr)
+{
+	_putchar('%');
+	return (1);
+}
 
+/**
+ * print_numbers - Prints the integer
+ * @arp: Argument Pointer
+ *
+ * Return: Count of all numbers printed
+ */
 int print_numbers(va_list arp)
 {
 	int num = 0, count = 0;
@@ -53,7 +68,6 @@ int print_numbers(va_list arp)
 
 	return (count);
 }
-
 /**
  * print_int - Prints the integer
  * @i: Number to be printed
@@ -81,5 +95,5 @@ int print_int(int i)
 	}
 	_putchar((num % 10) + 48);
 
-	return (count);
+	return (count);	
 }
