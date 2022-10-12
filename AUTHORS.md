@@ -7,4 +7,4 @@
 
 ### This project is licensed under the Holberton School Software Engineering Program
 
-#### Octuber 10, 2022
+#### October 15, 2022
