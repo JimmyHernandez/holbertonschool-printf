@@ -98,7 +98,7 @@
 ## References
 
 - [Man page](https://man7.org/linux/man-pages/man3/printf.3.html)
-- [Markdown rules](https://github.com/DavidAnson/markdownlint/blob/v0.26.2/doc/Rules.md#md041)
+- [Markdown Rules](https://github.com/DavidAnson/markdownlint/blob/v0.26.2/doc/Rules.md#md041)
 - [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 - [Markdown Extended](https://www.markdownguide.org/extended-syntax/)
 
