@@ -1,0 +1,113 @@
+TH man 3 2022-10-15 "_printf man page"
+
+
+.SH NAME
+
+.B _printf
+
+- output conversion.
+
+.SH SYNOPSIS
+
+.B #include "main.h"
+
+.B int _printf(const char *format, ...);
+
+.SH DESCRIPTION
+
+function writes output to stdout,
+the standard output. Writes output under
+the control of a format string that specifies
+how subsequent arguments are converted for output.
+
+
+.SH RETURN VALUE
+
+.B Return value
+
+On successful return, these functions return the number of
+characters printed, excluding the null byte used to end output
+to strings. If an output error is encountered, a negative value
+is returned.
+
+
+.SH Format of the format string
+
+The format string is a character string, beginning, and ending in its
+initial shift state, if any. The format string is also composed
+of conversion specifications, each of which result in fetching
+zero or more subsequent arguments. Each conversion specification
+is introduced by the character % and ends with the conversion
+specifier.
+
+
+.TP
+
+.B The conversion specifier
+
+A character that specifies the type of conversion to be applied.
+The conversion specifiers, and their meanings are:
+
+
+.TP
+
+.BR c
+
+The int argument is converted to an unsigned char, then the
+resulting character is written.
+
+
+.TP
+
+.BR %
+
+A '%' is written. No argument is converted. The complete conversion
+specification is '%%'.
+
+
+.TP
+
+.BR s
+
+The const char * argument is expected to be a pointer to an
+array of character type (pointer to a string). Characters from
+the array are written up to a terminating null byte, (but do not
+include the terminating null byte).
+
+
+.TP
+
+.BR d, i
+
+The int argument is converted to signed decimal notation.
+
+
+.SH BUGS
+
+No known bugs.
+
+
+.SH EXAMPLE
+
+To print an integer:
+
+
+ _printf("%i", 2022);
+
+
+To print a character:
+
+
+ _printf("%c", 'n');
+
+
+ To print a string:
+
+
+ _printf("%s", "Hello, world!");
+
+
+
+.SH AUTHOR
+
+Aryam Alvarez, Jimmy Hernandez
